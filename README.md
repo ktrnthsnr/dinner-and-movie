@@ -4,7 +4,7 @@ Node.js website where users can search for a restaurant from Yelp and also a mov
 
 ## GitHub URL
 
-
+https://github.com/DHernandez24e/dinner-and-a-movie
 
 ## React Website in Heroku
 
