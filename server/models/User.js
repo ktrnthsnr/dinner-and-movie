@@ -1,4 +1,5 @@
 const { Schema, Model } = require('mongoose');
+const Movie = require('./Movie');
 const bcrypt = require('bcrypt');
 
 const userSchema = new Schema({
@@ -16,7 +17,8 @@ const userSchema = new Schema({
         type: String,
         required: true,
         minlength: 5
-    }
+    },
+    savedMovies: [Movie]
 });
 
 userSchema.pre('save', async function(next) {
