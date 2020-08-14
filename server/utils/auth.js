@@ -4,8 +4,10 @@ const secret = 'test_secret';
 const expiration = '2h';
 
 module.exports = {
-    signToken: function ({ firstName, email, _id}) {
-        const payload = { firstName, email, _id };
+    //signToken: function ({ firstName, email, _id}) {
+    //const payload = { firstName, email, _id };
+    signToken: function({ username, email, _id }) {
+        const payload = { username, email, _id };
         return jwt.sign(
             { data: payload },
             secret,
@@ -16,7 +18,8 @@ module.exports = {
         let token = req.body.token || req.query.token || req.headers.authorization;
 
         if (req.headers.authorization) {
-            token = token.split(' ').pop().trim();
+            token = token
+            .split(' ').pop().trim();
         }
 
         if (!token) {
@@ -25,7 +28,7 @@ module.exports = {
 
         try {
             const { data } = jwt.verify(token, secret, { maxAge: expiration });
-            req.user = data;
+            req.user = data;        
         }
         catch {
             console.log('Invalid token');

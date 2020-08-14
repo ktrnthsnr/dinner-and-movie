@@ -1,6 +1,6 @@
-const { Schema, Model } = require('mongoose');
+//const { Schema, Model } = require('mongoose');
 
-const catSchema = new Schema({
+//const catSchema = new Schema({
     name:{
         type: String,
         required: true,
