@@ -22,7 +22,7 @@ https://easy-dinner-movie.herokuapp.com/
 
 ## Description
 
-- The website was built using the MERN stack - MongoDB, ExpressJS, ReactJS, NodeJS, npm packages and query languages from GraphQL and Apollo server.
+- The website was built using the MERN stack - MongoDB, ExpressJS, ReactJS, NodeJS - npm packages and query languages from GraphQL and Apollo server.
 
 - Core skills and technologies leveraged in the creation of this site, include
 
