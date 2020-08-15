@@ -1,62 +1,106 @@
+//utils is for non-React based code
 import gql from 'graphql-tag';
 
-export const QUERY_MOVIES = gql`
-  query getMovies($category: ID) {
-    movies(category: $category) {
+export const QUERY_THOUGHTS = gql`
+  query thoughts($username: String) {
+    thoughts(username: $username) {
       _id
-      name
-      description
-      time
-      select
-      image
-      category {
+      thoughtText
+      createdAt
+      username
+      reactionCount
+      reactions {
         _id
+        createdAt
+        username
+        reactionBody
       }
     }
   }
 `;
 
-export const QUERY_ALL_MOVIES = gql`
-  {
-    movies {
+// new -- added thought query
+export const QUERY_THOUGHT = gql`
+  query thought($id: ID!) {
+    thought(_id: $id) {
       _id
-      name
-      description
-      time
-      select
-      category {
-        name
+      thoughtText
+      createdAt
+      username
+      reactionCount
+      reactions {
+        _id
+        createdAt
+        username
+        reactionBody
       }
     }
   }
 `;
 
-export const QUERY_CATEGORIES = gql`
-{
-  categories {
-    _id
-    name
-  }
-}
-`;
-
+// new -- added user profile query, the profile.js page will import this
 export const QUERY_USER = gql`
-{
-  user {
-    firstName
-    lastName
-    orders {
+  query user($username: String!) {
+    user(username: $username) {
       _id
-      selectDate
-      movies {
+      username
+      email
+      friendCount
+      friends {
         _id
-        name
-        description
-        time
-        select
-        image
+        username
+      }
+      thoughts {
+        _id
+        thoughtText
+        createdAt
+        reactionCount
       }
     }
   }
-}
 `;
+
+// new -- query to retrieve all data
+export const QUERY_ME = gql`
+  {
+    me {
+      _id
+      username
+      email
+      friendCount
+      thoughts {
+        _id
+        thoughtText
+        createdAt
+        reactionCount
+        reactions {
+          _id
+          createdAt
+          reactionBody
+          username
+        }
+      }
+      friends {
+        _id
+        username
+      }
+    }
+  }
+`;
+
+// new -- query to retrieve some data
+export const QUERY_ME_BASIC = gql`
+  {
+    me {
+      _id
+      username
+      email
+      friendCount
+      friends {
+        _id
+        username
+      }
+    }
+  }
+`;
+
