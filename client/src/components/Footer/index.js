@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="w-100 mt-auto bg-secondary p-4">
-      <div className="container">&copy;2020 Easy Movie Dinner</div>
+      <div className="container">&copy;2020 Dinner and a Movie</div>
     </footer>
   );
 };

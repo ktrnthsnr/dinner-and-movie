@@ -1,21 +1,16 @@
 import React, { useState } from 'react';
-
-// new -- importing login user mutation and apollo\react hooks
 import { useMutation } from '@apollo/react-hooks';
 import { LOGIN_USER } from '../utils/mutations';
 
-// new -- adding JSON Web Token (JWT) authentication from the utils auth.js
 import Auth from '../utils/auth';
 
-// Login component definition
+
 const Login = (props) => {
-  //  useState() statement 
+
   const [formState, setFormState] = useState({ email: '', password: '' });
 
-  // new --  initialize our LOGIN_USER mutation with the useMutation() Hook // -- check 
   const [login, { error }] = useMutation(LOGIN_USER);
 
-  // update state based on form input changes
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -26,8 +21,7 @@ const Login = (props) => {
   };
 
 
-// new - handleFormSubmit function 
-  // submit form
+
 const handleFormSubmit = async event => {
   event.preventDefault();
 
@@ -36,26 +30,14 @@ const handleFormSubmit = async event => {
       variables: { ...formState }
     });
 
-    // new -- added for JSON web token (JWT)
+
     Auth.login(data.login.token);
 
-    // console.log(data);
+
   } catch (e) {
     console.error(e);
   }
 };
-
-  // previous - placeholder
-      // // submit form
-      // const handleFormSubmit = async (event) => {
-      //   event.preventDefault();
-
-      //   // clear form values
-      //   setFormState({
-      //     email: '',
-      //     password: '',
-      //   });
-      // };
 
   return (
     <main className='flex-row justify-center mb-4'>

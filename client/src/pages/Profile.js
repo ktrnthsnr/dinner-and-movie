@@ -1,38 +1,32 @@
 import React from 'react';
 
-// new -- adding redirect 
+
 import { Redirect, useParams } from 'react-router-dom';
-// new -- importing components, and user queries from utils, and JWT authentication utility
+
 import ThoughtList from '../components/ThoughtList';
 import ThoughtForm from '../components/ThoughtForm';
 import FriendList from '../components/FriendList';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
-// new -- importing JWT authService
+
 import Auth from '../utils/auth';
-// new -- mutations and apollo/react hooks
+
 import { ADD_FRIEND } from '../utils/mutations';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 
 
-// new -- after importing the updated thoughtlist component,(with profile links) and user profile query, and friendlist
 const Profile = () => {
         const { username: userParam } = useParams();
 
-        // new -- friend mutation
         const [addFriend] = useMutation(ADD_FRIEND);
 
-        // const { loading, data } = useQuery(QUERY_USER, {
-        //   variables: { username: userParam }
-        // });
 
         const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
           variables: { username: userParam }
         });
 
-        // const user = data?.user || {};
         const user = data?.me || data?.user || {};
 
-        // redirect to personal profile page if username is the logged-in user's
+
         if (Auth.loggedIn() && Auth.getProfile().data.username.toLowerCase() === userParam.toLowerCase()) {
           return <Redirect to="/profile" />;
         }

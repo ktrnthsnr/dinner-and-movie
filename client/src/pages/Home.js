@@ -28,17 +28,17 @@ const Home = () => {
   return (
     <main>
       <div className="flex-row justify-space-between">
+
         {loggedIn && (
           <div className="col-12 mb-3">
             <ThoughtForm />
           </div>
-        )}
-       
+        )}      
           <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
               {loading ? (
                 <div>Loading...</div>
              ) : (
-                <ThoughtList thoughts={thoughts} title="Your thoughts..." />
+                <ThoughtList thoughts={thoughts} title="Ideas..." />
               )}
             </div>
 
@@ -51,6 +51,15 @@ const Home = () => {
                     />
             </div>
           ) : null}
+
+              <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
+                <h2>Movies</h2>
+                </div>
+
+                <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
+                <h2>Dinner</h2>
+                </div>
+
     </div>
   </main>
   );
