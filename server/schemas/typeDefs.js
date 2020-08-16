@@ -2,7 +2,7 @@
 const { gql } = require('apollo-server-express');
 
 
-// User, Thought, Reaction, Query, Mutation, Auth queries
+// User, Thought, Reaction, Query, Mutation, and Auth queries
 const typeDefs = gql`
 
   type User {
@@ -55,38 +55,3 @@ const typeDefs = gql`
 // export the typeDefs
 module.exports = typeDefs;
 
-// // previous
-// type Query {
-//   thoughts: [Thought]
-// }
-
-
-// // previous
-// // create our typeDefs
-// const typeDefs = gql`
-//   type Query {
-//     // helloWorld: String?
-//   }
-// `;
-
-// -- previous, without JWT token authenticaion
-  // type Mutation {
-  //   login(email: String!, password: String!): User
-  //   addUser(username: String!, email: String!, password: String!): User
-  // }
-
-
-  // // previous
-  // type Mutation {
-  //   login(email: String!, password: String!): Auth
-  //   addUser(username: String!, email: String!, password: String!): Auth
-  // }
-
-
-  // // previous
-  // type Query {
-  //   users: [User]
-  //   user(username: String!): User
-  //   thoughts(username: String): [Thought]
-  //   thought(_id: ID!): Thought
-  // }

@@ -43,7 +43,7 @@
 
 .bg-img {
   /* The image used */
-  background-image: url("../public/images/apple-touch-icon.png");
+   /* background-image: url("../images/apple-touch-icon.png");  */
 
   min-height: 380px;
 

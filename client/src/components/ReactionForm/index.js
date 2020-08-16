@@ -1,4 +1,4 @@
-// new -- reaction component
+
 
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/react-hooks';
@@ -8,7 +8,7 @@ const ReactionForm = ({ thoughtId }) => {
 
     const [reactionBody, setBody] = useState('');
     const [characterCount, setCharacterCount] = useState(0);
-    const [addReaction, {error}] = useMutation(ADD_REACTION);
+    //const [addReaction, {error}] = useMutation(ADD_REACTION);
 
     const handleChange = event => {
         if (event.target.value.length <= 280) {
@@ -17,15 +17,10 @@ const ReactionForm = ({ thoughtId }) => {
         }
     };
 
-    // const handleFormSubmit = async event => {
-    //     event.preventDefault();
-    //     setBody('');
-    //     setCharacterCount(0);
-    // };
-
     const handleFormSubmit = async event => {
         event.preventDefault();
-
+        setBody('');
+        setCharacterCount(0);
         try {
 
             await addReaction({
@@ -39,10 +34,9 @@ const ReactionForm = ({ thoughtId }) => {
             console.error(e);
         }
 
-        setBody('');
-        setCharacterCount(0);
-    }
+    };
 
+const [addReaction, { error }] = useMutation(ADD_REACTION);
 
   return (
     <div>
@@ -52,9 +46,11 @@ const ReactionForm = ({ thoughtId }) => {
         </p>
         <form className="flex-row justify-center justify-space-between-md align-stretch" onSubmit={handleFormSubmit}>
         <textarea
-          placeholder="Leave a reaction to this thought..."
+          placeholder="Reply here..."
           className="form-input col-12 col-md-9"
-        ></textarea>
+          onChange={handleChange}
+          value={reactionBody}        
+          ></textarea>
 
         <button className="btn col-12 col-md-3" type="submit">
           Submit
