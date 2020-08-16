@@ -5,9 +5,7 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
-          // helloWorld: () => {
-            // return 'Hello world!';
-
+          
         me: async (parent, args, context) => {
           if (context.user) {
             const userData = await User.findOne({ _id: context.user._id })
@@ -47,11 +45,6 @@ const resolvers = {
             .populate('friends')
             .populate('thoughts');
         
-        
-
-        // thoughts: async () => {
-        //   return Thought.find().sort({ createdAt: -1 });
-
        
        
      }
@@ -85,7 +78,7 @@ const resolvers = {
         return { token, user }; 
       },
 
-      // -- methods created after adding JWT, 
+      //  methods created after adding JWR
       
       // only logged in users w/ a token should be able to access this mutation 
       addThought: async (parent, args, context) => {

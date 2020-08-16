@@ -38,7 +38,7 @@ export const QUERY_THOUGHT = gql`
   }
 `;
 
-// new -- added user profile query, the profile.js page will import this
+//  added user profile query, the profile.js page will import this
 export const QUERY_USER = gql`
   query user($username: String!) {
     user(username: $username) {
@@ -60,7 +60,7 @@ export const QUERY_USER = gql`
   }
 `;
 
-// new -- query to retrieve all data
+//  query to retrieve all data
 export const QUERY_ME = gql`
   {
     me {
@@ -88,7 +88,7 @@ export const QUERY_ME = gql`
   }
 `;
 
-// new -- query to retrieve some data
+// query to retrieve some data
 export const QUERY_ME_BASIC = gql`
   {
     me {

@@ -11,16 +11,12 @@ import { QUERY_THOUGHTS, QUERY_ME_BASIC} from '../utils/queries';
 
 
 const Home = () => {
-  // use useQuery hook to make GraphQL query requests
   const { loading, data } = useQuery(QUERY_THOUGHTS);
-  // use object destructuring to extract `data` from the `useQuery` Hook's response and rename it `userData` to be more descriptive
+
   const { data: userData } = useQuery(QUERY_ME_BASIC);
 
-   // -- optional chaining syntax, if data exists store in the thought constant, if not store in empty array
+
   const thoughts = data?.thoughts || []; 
-  // console.log(thoughts);
-    // removed -- test on both client & server - 
-      // cd client, npm start localhost:3000; 
  
 
   const loggedIn = Auth.loggedIn();

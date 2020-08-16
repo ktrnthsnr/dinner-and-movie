@@ -3,7 +3,7 @@
   --secondary: #f8f8f4;
   --tertiary: #033bd6;
   --quatrinary: #a4b9ca;
-  --light: #c1e4f7;
+  --light: #e8ebec;
   --dark: #1d2521;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
@@ -31,7 +31,12 @@ body {
   line-height: 1.5;
   font-size: 20px;
   color: var(--dark);
-  background-color: #f0ece3e1;
+  background-color: #473711e1;
+  background-image: url("./images/dogcouch1.jpg");
+  min-height: 380px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1,
