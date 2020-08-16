@@ -1,6 +1,6 @@
-//const { Schema, Model } = require('mongoose');
+
 const { Schema, model } = require('mongoose');
-//const Movie = require('./Movie');
+
 const bcrypt = require('bcrypt');
 
 const userSchema = new Schema(
@@ -22,7 +22,7 @@ const userSchema = new Schema(
         required: true,
         minlength: 5
     },
-    //savedMovies: [Movie]
+
     thoughts: [
       {
         type: Schema.Types.ObjectId,
@@ -55,14 +55,14 @@ userSchema.pre('save', async function(next) {
 
 // compare input pwd with hashed pwd
 userSchema.methods.isCorrectPassword = async function(password) {
-    //return await bcrypt.compare(password, this.password);
+
     return bcrypt.compare(password, this.password);
 };
 
 userSchema.virtual('friendCount').get(function() {
   return this.friends.length;
 });
-//const User = new Model('User', userSchema);
+
 const User = model('User', userSchema);
 
 module.exports = User;
