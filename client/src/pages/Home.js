@@ -34,7 +34,7 @@ const Home = () => {
               {loading ? (
                 <div>Loading...</div>
              ) : (
-                <ThoughtList thoughts={thoughts} title="Ideas..." />
+                <ThoughtList thoughts={thoughts} title="Chat here:" />
               )}
             </div>
 
@@ -49,13 +49,12 @@ const Home = () => {
           ) : null}
 
               <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
-                <h2>Movies</h2>
+                <h2>Search for a Movie</h2>
                 </div>
 
                 <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
-                <h2>Dinner</h2>
+                <h2>Search for Takeout</h2>
                 </div>
-
     </div>
   </main>
   );
