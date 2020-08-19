@@ -2,6 +2,8 @@ import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+//import Landing from './pages/Landing';
+import Carousel from './pages/Carousel';
 import Navbar from './components/Navbar';
 
 // React Router gives the single-page the multi-page feel
@@ -42,7 +44,8 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>      
+      <Router>   
+      <Carousel />
         <Navbar />
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
