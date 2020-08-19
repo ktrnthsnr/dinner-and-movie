@@ -1,43 +1,92 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
+import apiCall from '../../utils/foodApi';
+import { CardColumns, Card, Button, Form, Container } from 'react-bootstrap';
 
 const FoodContainer = () => {
+
+    const [formData, setFormData] = useState({ location: '', cuisineId: ''});
+
+    const [foodData, setFoodData] = useState([]);
+
+    const handleChange = (event) => {
+        const {name, value} = event.target;
+        setFormData({...formData, [name]: value});
+    }
     
     const handleFormSubmit = async (event) => {
-        // event.preventDefault();
+        event.preventDefault();
 
-        // try {
-        //     const response = await yelpCall();
-        //     if (!response.ok) {
-        //         throw new Error('Something went wrong');
-        //     }
-        //     const { businesses } = await response.json();
+        const {location, cuisineId} = formData;
 
-        //     console.log(businesses);
+            const response = apiCall(location, cuisineId);
 
-        // } catch (err) {
-        //     console.error(err);
-        // }
+            console.log(location, cuisineId);
+            if (!response) {
+                throw new Error('wha happen?');
+            }
+
+            const callReturn = await response.then(data => data);
+
+            const {name, menu_url, thumb} = callReturn;
+            
+            setFoodData([
+                {
+                    name: name,
+                    menu: menu_url,
+                    thumb: thumb
+                }
+            ])
+            console.log(foodData);
     }
 
     return (
-        <div>
-            <form onSubmit={handleFormSubmit}>
-                <label for='locationInput'>City:</label>
-                <input type='text' name='locationInput'></input>
-                <select>
-                    <option value='burgers'>Burgers</option>
-                    <option value='pizza'>Pizza</option>
-                    <option value='chinese'>Chinese</option>
-                    <option value='indian'>Indian</option>
-                    <option value=''>Random</option>
-                </select>
-                <button type='submit'>Submit</button>
-            </form>
-            <div>
-                {/* <p>Hi</p>
-                <p>Hello</p> */}
-            </div>
-        </div>
+        <Container>
+            <Form onSubmit={handleFormSubmit}>
+                <Form.Group>
+                    <Form.Label>Location</Form.Label>
+                    <Form.Control 
+                        type='text'
+                        name='location'
+                        value={formData.location}
+                        onChange={handleChange}
+                        placeholder='Enter your city here'
+                    />
+                </Form.Group>
+                <Form.Group>
+                    <Form.Label>Select Cuisine</Form.Label>
+                    <Form.Control 
+                        custom as='select'
+                        name='cuisineId'
+                        value={formData.cuisineId}
+                        onChange={handleChange}
+                    >
+                        <option value='1'>Burgers</option>
+                        <option value='55'>Pizza</option>
+                        <option value='25'>Chinese</option>
+                        <option value='30'>Indian</option>
+                        <option value=''>Random</option>
+                    </Form.Control>
+                </Form.Group>
+                <Button type='submit' variant='success' size='sm'>Submit</Button>
+            </Form>
+            <CardColumns>
+                {foodData.map((food) => {
+                    return(
+                        <Card border='dark'>
+                            {food.thumb ? (
+                                <Card.Img src={food.thumb} alt={`Preview of ${food.name}`} variant='top'/>
+                            ) : null}
+                            <Card.Body>
+                                <h3>{food.name}</h3>
+                                <a href={food.menu} target='_blank' rel='noopener noreferrer'>Check Menu</a>
+                            </Card.Body>
+                        </Card>
+                    )
+                })   
+                }
+            </CardColumns>
+        </Container>
     )
 }
 
