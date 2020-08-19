@@ -1,9 +1,9 @@
 require('dotenv').config({ path: '../../../.env'});
 const fetch = require('node-fetch');
+// const apiKey = process.env.ZOM_API_KEY;
+const apiKey = '53a62c0cb6aa1e812194551f4de0fa0d'
 
-const apiKey = process.env.ZOM_API_KEY;
-
-export const apiCall = async (location, cuisineId) => {
+const apiCall = async (location, cuisineId) => {
 
     const cityCall = await fetch(`https://developers.zomato.com/api/v2.1/cities?q=${location}`, {
         method: 'GET',
@@ -35,3 +35,5 @@ export const apiCall = async (location, cuisineId) => {
 
     return restaurant;
 };
+
+export default apiCall;
