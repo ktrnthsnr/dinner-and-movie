@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel'
 // import "bootstrap/dist/css/bootstrap.css";
 import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 
-// reference:
+// reference: https://react-bootstrap.github.io/components/carousel/
 
 // const LandFirst = () => {
 //   return (
