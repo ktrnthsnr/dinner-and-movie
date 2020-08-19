@@ -6,6 +6,8 @@ import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 
 // npm i --save react-bootstrap-carousel
 
+// reference: https://react-bootstrap.github.io/components/carousel/
+
 const CarouselLanding = () => {
 
     return (
@@ -17,8 +19,8 @@ const CarouselLanding = () => {
             alt="First slide"
         />
         <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>slide 1</h3>
+            <p>Title 1.</p>
         </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -29,8 +31,8 @@ const CarouselLanding = () => {
         />
     
         <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>slide 2</h3>
+            <p>Title 2.</p>
         </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -41,8 +43,8 @@ const CarouselLanding = () => {
         />
     
         <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <h3>slide 3</h3>
+            <p>Title 3.</p>
         </Carousel.Caption>
         </Carousel.Item>
     </Carousel>
