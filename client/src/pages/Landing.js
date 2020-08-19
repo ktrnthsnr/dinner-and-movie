@@ -1,23 +1,24 @@
 import React from "react";
 import "../styles/landing.css";
-import img1 from "../images/curtain.jpg";
-import img2 from "../images/catcouch.jpg";
+// import img1 from "../images/curtain.jpg";
+// import img2 from "../images/catcouch.jpg";
 import img3 from "../images/hobbit.jpg";
 import img4 from "../images/batm.jpg";
 import img5 from "../images/dogcouch3.jpg";
+
 
 const carouselSlides = [
   {
     title: "We travel all over the US",
     subtitle: "Check out our schedule!",
-    img: img1,
+    img: "/images/curtain.jpg",
     btnText: "View Schedule",
     btnUrl: "schedule.html",
   },
   {
     title: "Our food is seriously the bomb!",
     subtitle: "What are you waiting for?",
-    img: img2,
+    img: "/images/catcouch.jpg",
     btnText: "Purchase Tickets",
     btnUrl: "tickets.html",
   },
@@ -32,7 +33,7 @@ const Landing = (props) => {
       {slides.map((slide) => (
         <div
           className="carousel-item fullscreen-carousel "
-          style={{ backgroundImage: `url('${slide.img}')` }}
+          style={{ backgroundImage: `url('${process.env.PUBLIC_URL + slide.img}')` }}
         >
           <div className="d-flex h-100 align-items-center justify-content-center carousel-caption">
             <div className="container">
