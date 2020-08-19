@@ -11,6 +11,7 @@ import Auth from '../utils/auth';
 import { QUERY_THOUGHTS, QUERY_ME_BASIC} from '../utils/queries';
 import FoodContainer from '../components/Food';
 import MovieContainer from '../components/Movie';
+import SearchContainer from '../components/Search';
 
 
 const Home = () => {
@@ -37,6 +38,15 @@ const Home = () => {
                       <h2>Get takeout</h2>
                       <FoodContainer></FoodContainer>
                 </div>
+
+                
+                <div className={`col-12 mb-3`}>
+                    <h2>Google search</h2>         
+                    <SearchContainer></SearchContainer>
+                </div>
+
+                     
+ 
 
       </div> 
 
