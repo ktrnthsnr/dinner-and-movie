@@ -4,10 +4,12 @@ import { useQuery } from '@apollo/react-hooks';
 import ThoughtList from '../components/ThoughtList';
 import ThoughtForm from '../components/ThoughtForm';
 import FriendList from '../components/FriendList';
+
 // new -- add JSON web token (JWT)
 import Auth from '../utils/auth';
 // new -- import queries
 import { QUERY_THOUGHTS, QUERY_ME_BASIC} from '../utils/queries';
+import FoodContainer from '../components/Food';
 
 
 const Home = () => {
@@ -34,7 +36,7 @@ const Home = () => {
               {loading ? (
                 <div>Loading...</div>
              ) : (
-                <ThoughtList thoughts={thoughts} title="Ideas..." />
+                <ThoughtList thoughts={thoughts} title="Chat here:" />
               )}
             </div>
 
@@ -49,13 +51,13 @@ const Home = () => {
           ) : null}
 
               <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
-                <h2>Movies</h2>
+                <h2>Search for a Movie</h2>
                 </div>
 
                 <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
                 <h2>Dinner</h2>
+                <FoodContainer></FoodContainer>
                 </div>
-
     </div>
   </main>
   );
