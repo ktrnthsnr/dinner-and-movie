@@ -5,7 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "apollo-server-express": "^2.16.1",
+    "dotenv": "^8.2.0",
     "if-env": "^1.0.4",
+    "image-webpack-loader": "^6.0.0",
     "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {

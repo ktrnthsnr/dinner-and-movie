@@ -1,44 +1,35 @@
 import React, { useState } from 'react';
-
+// importing hooks to connect mutations
 import { useMutation } from '@apollo/react-hooks';
 import { ADD_USER } from '../utils/mutations';
-
-
+// JSON web token (JWT)
 import Auth from '../utils/auth';
 
 
 const Signup = () => {
 
+
   const [formState, setFormState] = useState({ username: '', email: '', password: '' });
-
-
+    // mutation hooks
   const [addUser, { error }] = useMutation(ADD_USER);
-
-
   const handleChange = (event) => {
     const { name, value } = event.target;
-
-
     setFormState({ ...formState, [name]: value, });
   };
-
   const handleFormSubmit = async event => {
     event.preventDefault();
-
-
     try {
-
       const { data } = await addUser({
         variables: { ...formState }
       });
-      Auth.login(data.addUser.token);
 
+    // JSON Web Token (JWT) for addUser
+    Auth.login(data.addUser.token);
 
     } catch (e) {
       console.error(e);
     }
   };
-
 
   return (
     <main className='flex-row justify-center mb-4'>

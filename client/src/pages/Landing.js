@@ -4,9 +4,9 @@ import Carousel from 'react-bootstrap/Carousel';
 
 // import img1 from "../images/curtain.jpg";
 // import img2 from "../images/catcouch.jpg";
-import img3 from "../images/hobbit.jpg";
-import img4 from "../images/batm.jpg";
-import img5 from "../images/dogcouch3.jpg";
+// import img3 from "../images/hobbit.jpg";
+// import img4 from "../images/batm.jpg";
+// import img5 from "../images/dogcouch3.jpg";
 
 
 const carouselSlides = [

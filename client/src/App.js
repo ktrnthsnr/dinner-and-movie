@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Landing from './pages/Landing';
 // import Navbar from '/components/Navbar';
 
+
 // React Router gives the single-page the multi-page feel
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -14,6 +15,8 @@ import NoMatch from './pages/NoMatch';
 import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
+import searchFood from './pages/searchFood';
+import searchMovie from './pages/searchMovie';
 
 
 // create the Apollo Provider
@@ -41,19 +44,21 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
+      <Router>      
+        <Navbar />
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
           <div className="container">
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/landing" component={Landing} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/thought" component={SingleThought} />
               <Route exact path="/profile/:username?" component={Profile} />
               <Route exact path="/thought/:id" component={SingleThought} />
+              <Route exact path="/profile/:username?" component={searchMovie} />
+              <Route exact path="/profile/:username?" component={searchFood} />
               <Route component={NoMatch} />
             </Switch>
           </div>
