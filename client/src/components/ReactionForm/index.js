@@ -40,10 +40,10 @@ const [addReaction, { error }] = useMutation(ADD_REACTION);
 
   return (
     <div>
-       <p className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}>
+       <h6 className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}>
             Character Count: {characterCount}/280
             {error && <span className="ml-2">Something went wrong...</span>}
-        </p>
+        </h6>
         <form className="flex-row justify-center justify-space-between-md align-stretch" onSubmit={handleFormSubmit}>
         <textarea
           placeholder="Reply here..."

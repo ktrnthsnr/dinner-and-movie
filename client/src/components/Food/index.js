@@ -25,7 +25,7 @@ const FoodContainer = () => {
                 <label for='locationInput'>City:</label>
                 <input type='text' name='locationInput'></input>
                 <select>
-                    <option value='sushi'>Burgers</option>
+                    <option value='burgers'>Burgers</option>
                     <option value='pizza'>Pizza</option>
                     <option value='chinese'>Chinese</option>
                     <option value='indian'>Indian</option>
@@ -34,8 +34,8 @@ const FoodContainer = () => {
                 <button type='submit'>Submit</button>
             </form>
             <div>
-                <p>Hi</p>
-                <p>Hello</p>
+                {/* <p>Hi</p>
+                <p>Hello</p> */}
             </div>
         </div>
     )

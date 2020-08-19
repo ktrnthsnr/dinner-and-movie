@@ -3,12 +3,7 @@ import { useMutation } from '@apollo/react-hooks';
 import { ADD_THOUGHT } from '../../utils/mutations';
 import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
 
-
-
 const ThoughtForm = () => {
-
-        
-          
 
         const [addThought, { error }] = useMutation(ADD_THOUGHT, {
             update(cache, { data: { addThought } }) {
