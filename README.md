@@ -60,7 +60,7 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 - The website has been deployed to a Heroku app containing an mLab MongoDB add on, to deploy to a production-like environment.
 - https://easy-dinner-movie.herokuapp.com/
 
--	![Dinner and a Movie](./dinmov.jpg "Dinner and a Movie")
+-	![Dinner and a Movie](./loggedinhome.jpg "Dinner and a Movie")
 
 ### Local install, seed and usage 
 
