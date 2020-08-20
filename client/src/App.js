@@ -2,10 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import Landing from './pages/Landing';
-import Navbar from '/components/Navbar';
-
-
+import Navbar from './components/Navbar';
 
 // create the Apollo Provider  // these two libraries will import statements
   import { ApolloProvider } from '@apollo/react-hooks';
