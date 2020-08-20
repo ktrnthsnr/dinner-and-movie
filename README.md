@@ -10,7 +10,7 @@ https://github.com/ktrnthsnr/dinner-and-movie
 
 https://ktrnthsnr-dinner-and-a-movie.herokuapp.com/
 
-## Walkthrough of the login\signin
+## Walkthrough of the application
 
 https://drive.google.com/file/d/1qauqWsFApvmEOZeChU05GsvG6AdCOI1o/view
 
