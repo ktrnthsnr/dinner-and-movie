@@ -1,10 +1,10 @@
 :root {
-  --primary: #f08b44;
+  --primary: #e09d6d;
   --secondary: #f8f8f4;
   --tertiary: #033bd6;
-  --quatrinary: #a4b9ca;
-  --light: #e8ebec;
-  --dark: #1d2521;
+  --quatrinary: #eaeef1;
+  --light: #d2dce0;
+  --dark: #4c504e;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
   --spacing-one: calc(1rem * 0.25);
@@ -46,7 +46,7 @@ h4,
 h5,
 h6 {
   font-family: 'Pacifico', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
 }
@@ -71,11 +71,13 @@ h4 {
 
 h5 {
   font-size: 1.25rem;
+  font-family: 'Mono', sans-serif;
   /* color: var(--light); */
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 0.5rem;
+  font-family: 'Pacifico', sans-serif;
 }
 
 p {
@@ -101,6 +103,7 @@ nav a {
   padding: 6px 10px;
   margin: 0 15px;
   transition: all 0.2s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav a:hover {

@@ -21,7 +21,7 @@ const ThoughtList = ({ thoughts, title }) => {
               >
                 {thought.username}
               </Link>{' '}
-              comment on {thought.createdAt}
+              asked on {thought.createdAt}
             </p>
             <div className="card-body">
               <Link to={`/thought/${thought._id}`}>
