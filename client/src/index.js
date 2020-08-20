@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 // // importing landing page 
-// import CarouselLanding from './pages/CarouselLanding';
+    // import CarouselLanding from './pages/CarouselLanding';
 
 ReactDOM.render(
   <React.StrictMode>
