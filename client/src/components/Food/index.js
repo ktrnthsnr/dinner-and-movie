@@ -50,7 +50,7 @@ const FoodContainer = () => {
                         name='location'
                         value={formData.location}
                         onChange={handleChange}
-                        placeholder='Enter your city here'
+                        placeholder='Enter city name'
                     />
                 </Form.Group>
                 <Form.Group>

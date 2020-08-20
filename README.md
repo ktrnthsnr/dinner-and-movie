@@ -1,6 +1,6 @@
 # Dinner and a Movie
 
-Node.js website where users can search for a restaurant from Yelp and also a movie to watch from Netflix.
+Node.js website where users can search for a restaurant nearby and also a movie to watch, and chat about their choices online.
 
 ## GitHub URL
 
@@ -43,7 +43,10 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 
 - Prereq: install VSCode, Node.js, and MongoDB
 - After cloning the GitHub repo to your local drive, run the following in the VSCode command-line terminal
-- Install all components listed within the package.json file for npm
+- Install all components listed within the package.json file for npm, from the root
+     - $ `npm i`
+
+- For further installations if needed, you may choose to install from the client or server as well.
     - Server 
     - $ `cd server`
     - $ `npm i`
@@ -51,15 +54,13 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
     - $ `cd client`
     - $ `npm i`
 
-- Otherwise, for custom individual component installations, install the npm packages per each server and client:
-
 ## Usage
 
 ### Website
 - The website has been deployed to a Heroku app containing an mLab MongoDB add on, to deploy to a production-like environment.
-- <insert here>
+- https://easy-dinner-movie.herokuapp.com/
 
--	![insert](./insert.jpg "insert")
+-	![Dinner and a Movie](./dinmov.jpg "Dinner and a Movie")
 
 ### Local install, seed and usage 
 
