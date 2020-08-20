@@ -110,7 +110,7 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 
 ## Contribution
 
-Katherine, Katarina, Chris, Diego
+Asa Katarina Thisner, Diego Hernandez, Katherine Guerin, Chris Acedo
 
 ## React
 
