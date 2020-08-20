@@ -21,7 +21,12 @@ const Home = () => {
   const loggedIn = Auth.loggedIn();
 
   return (
-    <main>
+    <main className='flex-row justify-center mb-4'>
+      <div className='col-12 col-md-6'>
+        <div className='card'>
+          <h3 className='card-header'>Takeout and Movies </h3>
+          <div className='card-body'>
+
 
       <div className="d-flex justify-content-end">     
 
@@ -31,7 +36,7 @@ const Home = () => {
                 </div> */}
 
                 <div className={`col-12 mb-3 `}>
-                      <h2>Get takeout</h2>
+                      <h2>Locate a Restaurant Nearby</h2>
                       <div ><FoodContainer></FoodContainer> </div>
                 </div>
                 
@@ -55,6 +60,9 @@ const Home = () => {
                             </div> 
                     </div>                      
         </div> 
+    </div>
+  </div>
+</div>
 
       <div className="flex-row justify-space-between">   
       
