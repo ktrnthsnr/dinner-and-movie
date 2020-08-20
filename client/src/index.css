@@ -52,7 +52,7 @@ h6 {
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.25rem; 
 }
 
 h2 {
@@ -1261,3 +1261,6 @@ nav a:hover {
 }
 
 
+div .indent {
+  text-indent: 50px;
+}

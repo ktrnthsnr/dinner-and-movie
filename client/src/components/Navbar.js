@@ -17,7 +17,7 @@ const AppNavbar = () => {
   return (
     <>
     <h2 className="bg-light text-primary p-3 display-inline-block">
-          <Navbar.Toggle aria-controls='navbar' />
+          {/* <Navbar.Toggle aria-controls='navbar' /> */}
           <Navbar.Collapse id='navbar'>
             <Nav className='ml-auto'>
               <Nav.Link as={Link} to='/Login'>

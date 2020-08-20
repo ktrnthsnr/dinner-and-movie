@@ -9,8 +9,8 @@ const MovieContainer = () => {
     return (
         <div>
             <form onSubmit={handleFormSubmit}>
-                <label for='locationInput'>Title:</label>
-                <input type='text' name='locationInput'></input>
+                <label for='locationInput' class="indent">Title:</label>
+                <input type='text' name='locationInput' class="indent"></input>
                 <select>
                     <option value='action'>Action</option>
                     <option value='comedy'>Comedy</option>
