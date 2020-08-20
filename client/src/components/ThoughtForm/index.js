@@ -70,7 +70,7 @@ const ThoughtForm = () => {
             onSubmit={handleFormSubmit}
         >
       <textarea
-            placeholder="Chat here..."
+            placeholder="Start a converstation here..."
             value={thoughtText}
             className="form-input col-12 col-md-9"
             onChange={handleChange}
