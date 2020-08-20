@@ -16,7 +16,7 @@ const AppNavbar = () => {
 
   return (
     <>
-    <h2 className="bg-light text-primary p-3 display-inline-block">
+    <h4 className="bg-light text-primary p-2 display-inline-block">
           {/* <Navbar.Toggle aria-controls='navbar' /> */}
           <Navbar.Collapse id='navbar'>
             <Nav className='ml-auto'>
@@ -32,11 +32,11 @@ const AppNavbar = () => {
                   
                 </>
               ) : (
-                <Nav.Link as={Link} to='/Signup' onClick={() => setShowModal(true)}> Sign Up</Nav.Link>
+                <Nav.Link as={Link} to='/Signup' onClick={() => setShowModal(true)}> SignUp</Nav.Link>
               )}
             </Nav>
           </Navbar.Collapse>
-          </h2>
+          </h4>
     </>
   );
 };

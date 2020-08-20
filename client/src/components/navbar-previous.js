@@ -55,7 +55,7 @@ const AppNavbar = () => {
                   <Nav.Link eventKey='login'>Login</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey='signup'>Sign Up</Nav.Link>
+                  <Nav.Link eventKey='signup'>SignUp</Nav.Link>
                 </Nav.Item>
               </Nav>
             </Modal.Title>

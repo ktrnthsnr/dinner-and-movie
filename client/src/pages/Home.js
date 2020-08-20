@@ -30,33 +30,31 @@ const Home = () => {
                       <div class="indent"> <MovieContainer></MovieContainer> </div>
                 </div> */}
 
-
                 <div className={`col-12 mb-3 `}>
                       <h2>Get takeout</h2>
                       <div ><FoodContainer></FoodContainer> </div>
                 </div>
-
                 
                 <div className={`col-12 mb-3`}>
                     <h2>Type a movie name to see reviews</h2>         
-                    <SearchContainer></SearchContainer>
+                    <div ><SearchContainer></SearchContainer></div>
                   
-
                  <div className={`col-12 mb-3`}>
                         <h2>Watch together:</h2>  
                         </div>   
-                        <div class="indent">
-                        <a href="https://www.cnet.com/how-to/still-havent-tried-netflix-party-with-your-friends-heres-how-to-watch-movies-together-for-free/">  Setup a Netflix Party</a>
-                        </div>  
-                        <div class="indent">
-                        <a href="https://zoom.us/">  Zoom video conferencing</a>
-                        </div>  
-                        <div class="indent">
-                        <a href="https://www.skype.com/en/features/screen-sharing/">  Skype screen sharing</a>
-                        </div>    
-                    </div>         
+                            <div class="link">
+                              <div class="indent">
+                              <a href="https://www.cnet.com/how-to/still-havent-tried-netflix-party-with-your-friends-heres-how-to-watch-movies-together-for-free/">  Setup a Netflix Party</a>
+                              </div>  
+                              <div class="indent">
+                              <a href="https://zoom.us/">  Zoom video conferencing</a>
+                              </div>  
+                              <div class="indent">
+                              <a href="https://www.skype.com/en/features/screen-sharing/">  Skype screen sharing</a>
+                              </div>    
+                            </div> 
+                    </div>       
                
-
         </div> 
 
       <div className="flex-row justify-space-between">   

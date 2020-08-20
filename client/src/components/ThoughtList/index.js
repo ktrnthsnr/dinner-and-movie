@@ -25,7 +25,7 @@ const ThoughtList = ({ thoughts, title }) => {
             </p>
             <div className="card-body">
               <Link to={`/thought/${thought._id}`}>
-                <p>{thought.thoughtText}</p>
+                <p className="pill mb-3">{thought.thoughtText}</p>
                 <p className="mb-0">
                   Responses: {thought.reactionCount}  {' '}
                   {thought.reactionCount ? '' : 'None'} 

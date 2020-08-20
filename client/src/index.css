@@ -1,9 +1,11 @@
 :root {
-  --primary: #e09d6d;
+  --primary: #f08438;
   --secondary: #f8f8f4;
   --tertiary: #033bd6;
   --quatrinary: #eaeef1;
+  --lightblue: rgb(65, 158, 235);
   --light: #d2dce0;
+  --lightdark: #9ea4a5;
   --dark: #4c504e;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
@@ -29,14 +31,19 @@ body {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  font-size: 20px;
+  font-size: 30px;
   color: var(--dark);
-  background-color: #473711e1;
+  background-color:var(--secondary);
   background-image: url("./images/dogcouch1.jpg");
-  min-height: 380px;
+  /* display:block; */
+  height: auto;
+  /* min-height: 380px; */
   background-position: center;
+  /* position: relative; */
   background-repeat: no-repeat;
+  max-width: 100%;
   background-size: cover;
+  position: top;
 }
 
 h1,
@@ -51,8 +58,17 @@ h6 {
   line-height: 1.25;
 }
 
+header {
+  position: fixed;
+}
+
 h1 {
-  font-size: 2.25rem; 
+  font-size: 2.50rem; 
+  background-color: rgb(194, 186, 186);
+  color: black;
+  display:block;
+  max-width: 100%;
+  height: auto;
 }
 
 h2 {
@@ -83,6 +99,21 @@ h6 {
 p {
   font-size: 1.1rem;
   margin-top: 0;
+}
+
+
+h4,
+h5,
+h6 {
+  font-family: 'Okra', sans-serif;
+  font-weight: 500;
+  margin: 5px 0;
+  line-height: 1.25;
+}
+
+p:hover {
+  /* color: var(--secondary); */
+  background-color: var(--lightblue);
 }
 
 a {
@@ -118,24 +149,36 @@ nav a:hover {
   font-size: 2.5rem;
 }
 
+a.nav-link {
+  /* color: var(--secondary); */
+  /* background-color: var(--tertiary); */
+}
+
+a.nav-link:hover {
+  /* color: var(--secondary); */
+  background-color: var(--lightblue);
+}
+
 .btn,
 .pill {
   font-size: 1.3rem;
   text-decoration: none;
   padding: 0.5rem 1.2rem;
   margin: 5px 0;
+  font-family: Okra, Geneva, Tahoma, sans-serif;
   border-radius: var(--border-radius);
-  border: none;
-  color: var(--dark);
+  border-color: #2196F3;
+  color: var(--primary);
   outline: none;
   background-color: var(--secondary);
   transition: all 0.5s;
 }
 
+/* responses hover  */
 .btn:hover,
 .pill:hover {
   color: var(--secondary);
-  background-color: var(--tertiary);
+  background-color: var(--lightblue);
 }
 
 .btn-inline {
@@ -154,7 +197,7 @@ nav a:hover {
 .card-header {
   color: var(--secondary);
   margin: 0;
-  background-color: var(--dark);
+  background-color: var(--lightdark);
   padding: 0.625rem;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
 }
@@ -791,8 +834,12 @@ nav a:hover {
   background-color: var(--primary);
 }
 
+/* header dinner and a movie  */
 .bg-secondary {
+  position: relative;
   background-color: var(--secondary);
+  max-width: 100%;
+  /* background-image: url("./images/dogcouch1.jpg"); */
 }
 
 .bg-tertiary {
@@ -1263,4 +1310,61 @@ nav a:hover {
 
 div .indent {
   text-indent: 50px;
+  font-size: 1.2rem;
+  margin: 0.625rem 0 0.25rem;
+  width: .5;
 }
+
+div .indent:hover {
+  background-color: var(--lightblue);
+}
+
+/* single thought  */
+div p {
+  background-color: var(--light);
+  font-size: 1.5rem;
+  font-family: Okra, Geneva, Tahoma, sans-serif;
+  color: var(--primary);
+}
+
+p.m-0 {
+  color: var(--dark);
+  /* background-color: var(--secondary); */
+  font-size: 0.75rem;
+  font-family: Okra, Geneva, Tahoma, sans-serif;
+  background-color: var(--secondary);
+}
+
+/* responses hover  */
+.div p :hover {
+  color: var(--secondary);
+  background-color: var(--lightblue);
+}
+
+/* image  */
+.hero {
+  background-image: url("./images/dogcouch1.jpg");
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.footer {
+  /* position: fixed; */
+  bottom: 0;
+  width: 100%;
+  /* left: 0; */
+  font-family: 'Pacifico', sans-serif;
+  font-size: 1.5rem;
+  padding: 0;
+  line-height: 1.5;
+  /* background-color: var(--light); */
+  color: var(--primary);
+  text-align: center;
+  width: 100%;
+  margin: 10px;
+
+}
+
