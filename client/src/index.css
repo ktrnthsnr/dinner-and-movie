@@ -1,11 +1,11 @@
 :root {
-  --primary: #f08438;
-  --secondary: #f8f8f4;
+  --primary: #d85d05;
+  --secondary: rgba(211, 211, 211, 0.918);
   --tertiary: #033bd6;
   --quatrinary: #eaeef1;
   --lightblue: rgb(65, 158, 235);
   --light: #d2dce0;
-  --lightdark: #9ea4a5;
+  --lightdark: rgb(66, 65, 65);
   --dark: #4c504e;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
@@ -43,8 +43,11 @@ body {
   background-repeat: no-repeat;
   max-width: 100%;
   background-size: cover;
-  position: top;
-}
+  /* position: bottom; */
+
+  height: 400px;
+  width: 100%;
+} 
 
 h1,
 h2,
@@ -60,6 +63,46 @@ h6 {
 
 header {
   position: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 30px;
+  color: var(--dark);
+  /* background-color:var(--secondary); */
+  background-color:grey;
+  /* background-image: url("./images/insert.jpg");   */
+  /* height: auto; */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  /* max-width: 100%; */
+  /* background-size: cover; */
+  /* position: top; */
+  /* height: 500px; */
+  /* width: 100%; */
+}
+
+/* not used */
+h1 .landheader {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 30px;
+  color: var(--dark);
+  background-color:var(--secondary);
+  background-image: url("./images/dogcouch1.jpg");
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  background-size: cover;
+  position: top;
+  height: 500px;
+  width: 100%;
 }
 
 h1 {
@@ -387,6 +430,12 @@ a.nav-link:hover {
 
 .mb-4 {
   margin-bottom: var(--spacing-four);
+  margin-top:var(--spacing-four);
+  margin-left:var(--spacing-four);
+  margin-right:var(--spacing-four);
+  /* background-color: transparent; */
+  padding: 6px 10px;
+  margin: 0 15px;
 }
 
 .mb-5 {
@@ -850,8 +899,9 @@ a.nav-link:hover {
   background-color: var(--light);
 }
 
+/* profile card  */
 .bg-dark {
-  background-color: var(--dark);
+  background-color: var(--lightdark);
 }
 
 /* FLEX CONTENT */
@@ -1307,7 +1357,6 @@ a.nav-link:hover {
   }
 }
 
-
 div .indent {
   text-indent: 50px;
   font-size: 1.2rem;
@@ -1330,9 +1379,10 @@ div p {
 p.m-0 {
   color: var(--dark);
   /* background-color: var(--secondary); */
+  background: transparent;
   font-size: 0.75rem;
   font-family: Okra, Geneva, Tahoma, sans-serif;
-  background-color: var(--secondary);
+  /* background-color: var(--secondary); */
 }
 
 /* responses hover  */
@@ -1340,16 +1390,6 @@ p.m-0 {
   color: var(--secondary);
   background-color: var(--lightblue);
 }
-
-/* image  */
-.hero {
-  background-image: url("./images/dogcouch1.jpg");
-  height: 500px;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
 
 .footer {
   /* position: fixed; */

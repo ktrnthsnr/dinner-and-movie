@@ -21,7 +21,12 @@ const Home = () => {
   const loggedIn = Auth.loggedIn();
 
   return (
-    <main>
+    <main className='flex-row justify-center mb-4'>
+      <div className='col-12 col-md-6'>
+        <div className='card'>
+          <h3 className='card-header'>Takeout and Movies </h3>
+          <div className='card-body'>
+
 
       <div className="d-flex justify-content-end">     
 
@@ -31,31 +36,33 @@ const Home = () => {
                 </div> */}
 
                 <div className={`col-12 mb-3 `}>
-                      <h2>Get takeout</h2>
+                      <h2>Locate a Restaurant Nearby</h2>
                       <div ><FoodContainer></FoodContainer> </div>
                 </div>
                 
                 <div className={`col-12 mb-3`}>
                     <h2>Type a movie name to see reviews</h2>         
-                    <div ><SearchContainer></SearchContainer></div>
+                    <SearchContainer></SearchContainer>
                   
                  <div className={`col-12 mb-3`}>
-                        <h2>Watch together:</h2>  
+                        <h2>Watch together</h2>  
                         </div>   
                             <div class="link">
                               <div class="indent">
-                              <a href="https://www.cnet.com/how-to/still-havent-tried-netflix-party-with-your-friends-heres-how-to-watch-movies-together-for-free/">  Setup a Netflix Party</a>
+                              <a href="https://www.cnet.com/how-to/still-havent-tried-netflix-party-with-your-friends-heres-how-to-watch-movies-together-for-free/">Setup a Netflix Party</a>
                               </div>  
                               <div class="indent">
-                              <a href="https://zoom.us/">  Zoom video conferencing</a>
+                              <a href="https://zoom.us/">Zoom video conferencing</a>
                               </div>  
                               <div class="indent">
-                              <a href="https://www.skype.com/en/features/screen-sharing/">  Skype screen sharing</a>
+                              <a href="https://www.skype.com/en/features/screen-sharing/">Skype screen sharing</a>
                               </div>    
                             </div> 
-                    </div>       
-               
+                    </div>                      
         </div> 
+    </div>
+  </div>
+</div>
 
       <div className="flex-row justify-space-between">   
       

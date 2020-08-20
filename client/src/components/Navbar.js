@@ -20,6 +20,7 @@ const AppNavbar = () => {
           {/* <Navbar.Toggle aria-controls='navbar' /> */}
           <Navbar.Collapse id='navbar'>
             <Nav className='ml-auto'>
+              <Nav.Link as={Link} to='/'> Home </Nav.Link>
               <Nav.Link as={Link} to='/Login'>
             Login  
               </Nav.Link>
@@ -28,8 +29,7 @@ const AppNavbar = () => {
                 <>
                   <Nav.Link onClick={Auth.logout}> Logout</Nav.Link>
                   <Nav.Link as={Link} to='/profile'> My Profile </Nav.Link>
-                  {/* <Link to={`/profile/${thought.username}`}  style={{ fontWeight: 700 }} className="text-light"></Link>                   */}
-                  
+                  {/* <Link to={`/profile/${thought.username}`}  style={{ fontWeight: 700 }} className="text-light"></Link>   */}                  
                 </>
               ) : (
                 <Nav.Link as={Link} to='/Signup' onClick={() => setShowModal(true)}> SignUp</Nav.Link>
