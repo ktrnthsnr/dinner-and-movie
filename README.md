@@ -4,11 +4,11 @@ Node.js website where users can search for a restaurant nearby and also a movie 
 
 ## GitHub URL
 
-https://github.com/ktrnthsnr/dinner-and-movie
+https://github.com/DHernandez24e/dinner-and-a-movie
 
 ## React Website in Heroku
 
-https://ktrnthsnr-dinner-and-a-movie.herokuapp.com/
+https://easy-dinner-movie.herokuapp.com/  
 
 ## Walkthrough of the application
 
@@ -62,7 +62,7 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 
 ### Website
 - The website has been deployed to a Heroku app containing an mLab MongoDB add on, to deploy to a production-like environment.
-- https://ktrnthsnr-dinner-and-a-movie.herokuapp.com/
+- https://easy-dinner-movie.herokuapp.com/ 
 
 -	![Dinner and a Movie](./loggedinhome.jpg "Dinner and a Movie")
 
