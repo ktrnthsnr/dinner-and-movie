@@ -29,13 +29,11 @@ https://drive.google.com/file/d/1qauqWsFApvmEOZeChU05GsvG6AdCOI1o/view
 - The website was built using the MERN stack - MongoDB, ExpressJS, ReactJS, NodeJS, npm packages and query languages from GraphQL and Apollo server.
 
 - Core skills and technologies leveraged in the creation of this site, include
-
-    * Performant JavaScript - to provide a fast and efficient response for the end user
-    * NoSQL databases - MongoDB and Mongoose ODB
-    * Progressive Web Applications - to allow this application to be downloadable to the user's browser and used with no internet connectivity
+    
+    * NoSQL databases - MongoDB and Mongoose ODB   
     * React single-page applications - React, Apollo Provider        
     * GraphQL APIs and Apollo server\client
-    * Third party APIs - Yelp and Netflix
+    * Third party API - zomato
     * Concurrent servers in a MERN app 	Client\server - npm concurrently
     * Authentication - JSON Web Tokens
 
