@@ -78,8 +78,6 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 
 - To view the site locally on the development server, first install the npm packages
     - $ `npm i` or `npm install`
-- Then seed the data
-    - $ `npm run seed`
 - Start the MongoDB
     - $ `mongod`
 - To test the Apollo server sider connections to the Express.js, (to test the schemas and server.js), run the following 
@@ -97,7 +95,6 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
     - $ `npm start`
 - The default browser in your React environment, 
     - `http://localhost:3000/`
-
 
 ## Testing
 
