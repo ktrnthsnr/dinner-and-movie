@@ -87,6 +87,7 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 - $ `http://localhost:3001/graphql`
 
 #### Client directory - React front-end development server
+
 - If cloning to your local drive, install the npm packages 
     - $ `cd client`
     - $ `npm i` or `npm install`
@@ -98,10 +99,8 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 
 ## Testing
 
-- The development server will then run under the /server directory, React development under the /client directory. To test for the client, run both servers, cd to each directory, then enter `npm start` in two separate bash windows.
-
-- There are two servers running through localhost,  on two different ports,
-![React And Graphql](./img/ReactAndQueryQL.jpg "React And Graphql")
+- The development server will then run under the /server directory, React development under the /client directory. To test for the client, run both servers, enter `npm start` from the root. Then open a browser, browser in your React environment, 
+    - `http://localhost:3000/`
 
 ## Contribution
 
